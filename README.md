@@ -1,1 +1,126 @@
-# Algo-especial-que-preguntarte
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de San Valentín</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 120px;
+            background-color: #fff;
+            border: 2px solid #d81b60;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: scale(0);
+            animation: openEnvelope 2s forwards;
+        }
+
+        .envelope::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #d81b60;
+            transform: translateY(-100%);
+            animation: flapEnvelope 2s forwards;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1.5s forwards 1s; /* Delay to make it appear after the envelope opens */
+        }
+
+        .heading {
+            font-size: 2em;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            font-size: 1.1em;
+            color: #d81b60;
+        }
+
+        @keyframes openEnvelope {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes flapEnvelope {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="envelope">
+    <div class="container">
+        <div class="heading">
+            ¡Feliz San Valentín!
+        </div>
+        <div class="content">
+            <p>Hola My Princess,</p>
+
+            <p>Sé que es una manera única de pedir este tipo de cosas, pero como sé que siempre hay una primera vez para todo, quiero aprovechar este momento para decirte algo muy importante. Eres una persona maravillosa y quiero pasar el resto de mis días a tu lado. Y por supuesto, que cada fecha no solo sea especial como lo es esta, sino que cada día a tu lado sea una aventura.</p>
+
+            <p>¿Me darías el honor de ser mi San Valentín?</p>
+
+            <p>Te amo mucho preciosa, haces que siempre me quiera superar cada día más.</p>
+
+            <p>Con todo el amor y cariño del mundo,</p>
+        </div>
+        <div class="footer">
+            <p>Copito</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
